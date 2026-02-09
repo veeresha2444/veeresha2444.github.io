@@ -440,11 +440,12 @@
       </div>
      </div>
     </section>
-   </div><!-- CONTACT PAGE -->
-   <div id="contact-page" class="hidden-page">
+   </div>
+<!-- ===== CONTACT PAGE ===== -->
+   <div id="contact-page" class="hidden-page"><!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#" onclick="goToHome(event)" class="text-2xl font-bold gradient-text">VG</a>
-      <div class="flex items-center gap-8"><a href="#" onclick="goToHome(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a> <a href="#" onclick="goToAbout(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a> <a href="#" onclick="goToProjects(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a> <a href="#" onclick="goToSkills(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a> <a href="#" onclick="goToContact(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
+      <div class="flex items-center gap-8"><a href="#" onclick="goToHome(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a> <a href="#" onclick="goToAbout(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a> <a href="#" onclick="goToProjects(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a> <a href="#" onclick="goToSkills(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a> <a href="#" onclick="goToAchievements(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Achievements</a> <a href="#" onclick="goToExperience(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Experience</a> <a href="#" onclick="goToContact(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
       </div>
      </div>
     </nav>
@@ -452,19 +453,37 @@
      <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
        <h1 class="text-5xl md:text-6xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h1>
-       <p class="text-slate-400 mt-6 max-w-xl mx-auto text-lg">Feel free to reach out for any opportunities or questions.</p>
+       <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
+       <p class="text-slate-400 mt-6 max-w-xl mx-auto text-lg">I'm currently looking for Software Engineer, Backend, or Full-Stack opportunities. Feel free to reach out!</p>
       </div>
-      <div class="grid md:grid-cols-2 gap-8 mb-12"><a href="mailto:ganjiveeresh99@gmail.com" class="contact-link bg-slate-900/80 border border-slate-800 rounded-2xl p-8 text-center hover:border-indigo-500/50">
-        <div class="text-3xl mb-4">
-         ✉️
-        </div><h3 class="font-bold mb-2 text-xl">Email</h3><p class="text-indigo-400 font-semibold break-all">ganjiveeresh99@gmail.com</p></a> <a href="tel:+919353549959" class="contact-link bg-slate-900/80 border border-slate-800 rounded-2xl p-8 text-center hover:border-purple-500/50">
-        <div class="text-3xl mb-4">
-         📱
-        </div><h3 class="font-bold mb-2 text-xl">Phone</h3><p class="text-purple-400 font-semibold">+91 9353549959</p></a>
+      <div class="grid md:grid-cols-2 gap-8 mb-12"><!-- Email --> <a href="mailto:ganjiveeresh99@gmail.com" class="contact-link group bg-slate-900/80 border border-slate-800 rounded-2xl p-8 text-center hover:border-indigo-500/50">
+        <div class="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-500/30 transition-colors"><span class="text-3xl">✉️</span>
+        </div><h3 class="font-bold mb-2 text-xl">Email</h3><p class="text-indigo-400 font-semibold break-all">ganjiveeresh99@gmail.com</p></a> <!-- Phone --> <a href="tel:+919353549959" class="contact-link group bg-slate-900/80 border border-slate-800 rounded-2xl p-8 text-center hover:border-purple-500/50">
+        <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/30 transition-colors"><span class="text-3xl">📱</span>
+        </div><h3 class="font-bold mb-2 text-xl">Phone</h3><p class="text-purple-400 font-semibold">+91 9353549959</p></a> <!-- LinkedIn --> <a href="https://linkedin.com/in/veereshaganji" target="_blank" rel="noopener noreferrer" class="contact-link group bg-slate-900/80 border border-slate-800 rounded-2xl p-8 text-center hover:border-blue-500/50">
+        <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors"><span class="text-3xl">💼</span>
+        </div><h3 class="font-bold mb-2 text-xl">LinkedIn</h3><p class="text-blue-400 font-semibold">linkedin.com/in/veereshaganji</p></a> <!-- Location -->
+       <div class="contact-link group bg-slate-900/80 border border-slate-800 rounded-2xl p-8 text-center hover:border-pink-500/50">
+        <div class="w-16 h-16 bg-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-500/30 transition-colors"><span class="text-3xl">📍</span>
+        </div>
+        <h3 class="font-bold mb-2 text-xl">Location</h3>
+        <p class="text-pink-400 font-semibold">Koppal, Karnataka</p>
+       </div>
+      </div>
+      <div class="text-center"><a href="mailto:ganjiveeresh99@gmail.com" class="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl font-semibold hover:from-indigo-500 hover:to-purple-500 transition-all shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40"> <span>Send Email Now</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg></a>
+      </div>
+      <div class="mt-12 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-2xl p-8">
+       <h3 class="text-2xl font-bold mb-4 text-center">Quick Links</h3>
+       <div class="flex flex-wrap justify-center gap-4"><a href="https://linkedin.com/in/veereshaganji" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-slate-900/50 border border-slate-800 rounded-lg text-slate-300 hover:text-white hover:border-purple-500/50 transition-all"> LinkedIn Profile </a> <a href="mailto:ganjiveeresh99@gmail.com" class="px-6 py-2 bg-slate-900/50 border border-slate-800 rounded-lg text-slate-300 hover:text-white hover:border-indigo-500/50 transition-all"> Email Me </a> <a href="tel:+919353549959" class="px-6 py-2 bg-slate-900/50 border border-slate-800 rounded-lg text-slate-300 hover:text-white hover:border-purple-500/50 transition-all"> Call Me </a>
+       </div>
       </div>
      </div>
     </section>
    </div>
+   
    <footer class="border-t border-slate-800 py-8 px-6 bg-slate-950/50">
     <div class="max-w-6xl mx-auto text-center text-slate-500 text-sm">
      <p>© 2024 Veeresha Ganji. Built with ❤️ and modern web technologies.</p>
