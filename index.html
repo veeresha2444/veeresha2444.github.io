@@ -368,61 +368,78 @@
     </section>
    </div>
 
-<!-- Skills Mastery -->
-      <div class="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-3xl p-12">
-       <h2 class="text-3xl font-bold mb-8 flex items-center gap-3"><span class="text-3xl">🎯</span> <span>Skills <span class="gradient-text">Mastery</span></span></h2>
-       <div class="grid md:grid-cols-2 gap-8">
-        <div>
-         <div class="mb-6">
-          <div class="flex items-center justify-between mb-2"><span class="font-semibold text-slate-300">Python &amp; Backend Development</span> <span class="text-amber-400 font-bold">95%</span>
-          </div>
-          <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-           <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" style="width: 95%"></div>
-          </div>
+<!-- ===== SKILLS PAGE ===== -->
+   <div id="skills-page" class="hidden-page"><!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
+     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#" onclick="goToHome(event)" class="text-2xl font-bold gradient-text">VG</a>
+      <div class="flex items-center gap-8"><a href="#" onclick="goToHome(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a> <a href="#" onclick="goToAbout(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a> <a href="#" onclick="goToProjects(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a> <a href="#" onclick="goToSkills(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a> <a href="#" onclick="goToAchievements(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Achievements</a> <a href="#" onclick="goToExperience(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Experience</a> <a href="#" onclick="goToContact(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
+      </div>
+     </div>
+    </nav>
+    <section class="relative py-32 px-6 pt-24">
+     <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+       <h1 class="text-5xl md:text-6xl font-bold mb-4">Technical <span class="gradient-text">Skills</span></h1>
+       <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Programming -->
+       <div class="skill-card bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-indigo-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center"><span class="text-2xl">💻</span>
          </div>
-         <div class="mb-6">
-          <div class="flex items-center justify-between mb-2"><span class="font-semibold text-slate-300">Machine Learning &amp; AI</span> <span class="text-purple-400 font-bold">88%</span>
-          </div>
-          <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-           <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style="width: 88%"></div>
-          </div>
-         </div>
-         <div class="mb-6">
-          <div class="flex items-center justify-between mb-2"><span class="font-semibold text-slate-300">Cloud &amp; DevOps</span> <span class="text-pink-400 font-bold">85%</span>
-          </div>
-          <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-           <div class="h-full bg-gradient-to-r from-pink-500 to-rose-500 rounded-full" style="width: 85%"></div>
-          </div>
-         </div>
+         <h3 class="text-lg font-bold">Programming</h3>
         </div>
-        <div>
-         <div class="mb-6">
-          <div class="flex items-center justify-between mb-2"><span class="font-semibold text-slate-300">Full Stack Web Development</span> <span class="text-rose-400 font-bold">82%</span>
-          </div>
-          <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-           <div class="h-full bg-gradient-to-r from-rose-500 to-orange-500 rounded-full" style="width: 82%"></div>
-          </div>
+        <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">Python</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">SQL</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">JavaScript</span>
+        </div>
+       </div><!-- Web Technologies -->
+       <div class="skill-card bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-purple-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center"><span class="text-2xl">🌐</span>
          </div>
-         <div class="mb-6">
-          <div class="flex items-center justify-between mb-2"><span class="font-semibold text-slate-300">Database Design &amp; Optimization</span> <span class="text-orange-400 font-bold">90%</span>
-          </div>
-          <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-           <div class="h-full bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full" style="width: 90%"></div>
-          </div>
+         <h3 class="text-lg font-bold">Web Technologies</h3>
+        </div>
+        <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">HTML5</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">CSS3</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">Flask</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">Streamlit</span>
+        </div>
+       </div><!-- Databases -->
+       <div class="skill-card bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-pink-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center"><span class="text-2xl">🗄️</span>
          </div>
-         <div class="mb-6">
-          <div class="flex items-center justify-between mb-2"><span class="font-semibold text-slate-300">Problem Solving &amp; Algorithms</span> <span class="text-yellow-400 font-bold">92%</span>
-          </div>
-          <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-           <div class="h-full bg-gradient-to-r from-yellow-500 to-lime-500 rounded-full" style="width: 92%"></div>
-          </div>
+         <h3 class="text-lg font-bold">Databases</h3>
+        </div>
+        <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">MySQL</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">PostgreSQL</span>
+        </div>
+       </div><!-- Data & Analytics -->
+       <div class="skill-card bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-green-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center"><span class="text-2xl">����</span>
          </div>
+         <h3 class="text-lg font-bold">Data &amp; Analytics</h3>
+        </div>
+        <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">Pandas</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">Matplotlib</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">NLTK</span>
+        </div>
+       </div><!-- DevOps -->
+       <div class="skill-card bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-amber-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center"><span class="text-2xl">⚙️</span>
+         </div>
+         <h3 class="text-lg font-bold">DevOps &amp; Tools</h3>
+        </div>
+        <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">Docker</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">Kafka</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">Prometheus</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">Grafana</span>
+        </div>
+       </div><!-- Cloud -->
+       <div class="skill-card bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-cyan-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center"><span class="text-2xl">☁️</span>
+         </div>
+         <h3 class="text-lg font-bold">Cloud &amp; AWS</h3>
+        </div>
+        <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">EC2</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">S3</span> <span class="px-3 py-1 bg-slate-800 rounded-lg text-sm text-slate-300">IAM</span>
         </div>
        </div>
       </div>
      </div>
     </section>
-   
    </div><!-- CONTACT PAGE -->
    <div id="contact-page" class="hidden-page">
     <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
