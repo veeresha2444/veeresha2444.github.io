@@ -289,12 +289,147 @@
      <div class="max-w-4xl mx-auto"><button onclick="goToProjects()" class="mb-8 text-indigo-400 font-semibold flex items-center gap-2 hover:gap-3 transition-all"> ← Back to All Projects </button>
       <div id="project-detail-content"></div>
      </div>
-    </section>
-   </div><!-- ABOUT PAGE -->
-   <div id="about-page" class="hidden-page">
+    <!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veeresha Ganji | Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #4f46e5 #1e1b4b;
+    }
+    
+    body {
+      box-sizing: border-box;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    
+    html, body, #app-wrapper {
+      height: 100%;
+      width: 100%;
+    }
+    
+    #app-wrapper {
+      overflow-y: auto;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .slide-up {
+      animation: slideUp 0.8s ease-out forwards;
+      opacity: 0;
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .page-transition {
+      animation: fadeIn 0.5s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.2s; }
+    .stagger-3 { animation-delay: 0.3s; }
+    .stagger-4 { animation-delay: 0.4s; }
+    .stagger-5 { animation-delay: 0.5s; }
+    .stagger-6 { animation-delay: 0.6s; }
+    
+    .project-card, .skill-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    
+    .project-card:hover, .skill-card:hover {
+      transform: translateY(-8px);
+    }
+    
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.5;
+      animation: blob 8s ease-in-out infinite;
+    }
+    
+    @keyframes blob {
+      0%, 100% { transform: scale(1) translate(0, 0); }
+      33% { transform: scale(1.1) translate(30px, -30px); }
+      66% { transform: scale(0.9) translate(-20px, 20px); }
+    }
+    
+    .hidden-page {
+      display: none;
+    }
+
+    .contact-link {
+      transition: all 0.3s ease;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(129, 140, 248, 0.3);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-slate-950 text-slate-100 overflow-x-hidden">
+  <div id="app-wrapper" class="h-full w-full"><!-- Animated Background Blobs -->
+   <div class="blob w-96 h-96 bg-indigo-600 top-0 left-0 fixed" style="animation-delay: 0s; z-index: 0;"></div>
+   <div class="blob w-80 h-80 bg-purple-600 top-1/2 right-0 fixed" style="animation-delay: 2s; z-index: 0;"></div>
+   <div class="blob w-72 h-72 bg-pink-600 bottom-0 left-1/3 fixed" style="animation-delay: 4s; z-index: 0;"></div><!-- ===== HOME PAGE ===== -->
+   <div id="home-page" class="page-content"><!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#" onclick="goToHome(event)" class="text-2xl font-bold gradient-text">VG</a>
-      <div class="flex items-center gap-8"><a href="#" onclick="goToHome(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a> <a href="#" onclick="goToAbout(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a> <a href="#" onclick="goToProjects(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a> <a href="#" onclick="goToSkills(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a> <a href="#" onclick="goToContact(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
+      <div class="flex items-center gap-8"><a href="#" onclick="goToHome(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a> <a href="#" onclick="goToAbout(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a> <a href="#" onclick="goToProjects(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a> <a href="#" onclick="goToSkills(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a> <a href="#" onclick="goToAchievements(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Achievements</a> <a href="#" onclick="goToExperience(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Experience</a> <a href="#" onclick="goToContact(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
+      </div>
+     </div>
+    </nav><!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center px-6 pt-20">
+     <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="slide-up stagger-1 mb-6"><span class="inline-block px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-indigo-400 text-sm font-medium"> 👋 Welcome to my portfolio </span>
+      </div>
+      <h1 id="hero-title" class="slide-up stagger-2 text-5xl md:text-7xl font-bold mb-6">Hi, I'm <span class="gradient-text">Veeresha Ganji</span></h1>
+      <p id="hero-subtitle" class="slide-up stagger-3 text-xl md:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto">Software Engineer | Backend Developer | AI/ML Enthusiast</p>
+      <p class="slide-up stagger-4 text-lg text-slate-500 mb-10 max-w-xl mx-auto">Building scalable, data-driven web solutions with modern frameworks and a passion for clean, efficient code.</p>
+      <div class="slide-up stagger-5 flex flex-wrap items-center justify-center gap-4"><a href="#" onclick="goToProjects(event)" class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl font-semibold hover:from-indigo-500 hover:to-purple-500 transition-all shadow-lg shadow-indigo-500/25"> View My Work </a> <a href="#" onclick="goToContact(event)" class="px-8 py-4 bg-slate-800/50 border border-slate-700 rounded-xl font-semibold hover:bg-slate-800 transition-all"> Get In Touch </a>
+      </div>
+     </div>
+    </section>
+   </div><!-- ===== ABOUT PAGE ===== -->
+   <div id="about-page" class="hidden-page"><!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
+     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#" onclick="goToHome(event)" class="text-2xl font-bold gradient-text">VG</a>
+      <div class="flex items-center gap-8"><a href="#" onclick="goToHome(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a> <a href="#" onclick="goToAbout(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a> <a href="#" onclick="goToProjects(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a> <a href="#" onclick="goToSkills(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a> <a href="#" onclick="goToAchievements(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Achievements</a> <a href="#" onclick="goToExperience(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Experience</a> <a href="#" onclick="goToContact(event)" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
       </div>
      </div>
     </nav>
@@ -302,8 +437,66 @@
      <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
        <h1 class="text-5xl md:text-6xl font-bold mb-4">About <span class="gradient-text">Me</span></h1>
+       <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
       </div>
-      <p class="text-lg text-slate-300 leading-relaxed">I'm a results-driven Computer Science undergraduate with expertise in building scalable solutions.</p>
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+       <div class="relative">
+        <div class="bg-slate-900/80 backdrop-blur-sm rounded-3xl p-8 border border-slate-800">
+         <div class="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-1">
+          <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center"><span class="text-6xl">👨‍💻</span>
+          </div>
+         </div>
+         <div class="text-center">
+          <h3 class="text-2xl font-bold mb-2">Veeresha Ganji</h3>
+          <p class="text-indigo-400 font-medium">B.Tech CSE @ PES University</p>
+          <p class="text-slate-500 text-sm mt-1">📍 Koppal, Karnataka</p>
+         </div>
+        </div>
+       </div>
+       <div class="space-y-6">
+        <p class="text-lg text-slate-300 leading-relaxed">I'm a results-driven Computer Science undergraduate with a deep passion for building <span class="text-indigo-400 font-medium">scalable, data-driven solutions</span>. My expertise spans Python, backend development, and full-stack web applications.</p>
+        <p class="text-lg text-slate-400 leading-relaxed">From AI-powered language translation platforms to cloud-native monitoring systems, I love tackling complex problems and turning them into elegant, efficient solutions.</p>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+         <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold gradient-text">
+           3+
+          </div>
+          <div class="text-slate-500 text-sm">
+           Major Projects
+          </div>
+         </div>
+         <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold gradient-text">
+           AWS
+          </div>
+          <div class="text-slate-500 text-sm">
+           Certified
+          </div>
+         </div>
+         <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold gradient-text">
+           2026
+          </div>
+          <div class="text-slate-500 text-sm">
+           Graduation
+          </div>
+         </div>
+         <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold gradient-text">
+           10+
+          </div>
+          <div class="text-slate-500 text-sm">
+           Technologies
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-2xl p-8">
+       <h2 class="text-2xl font-bold mb-4">My Journey</h2>
+       <p class="text-slate-300 leading-relaxed mb-4">I started my technical journey by exploring web development and gradually moved into backend systems and AI/ML. My passion for solving real-world problems led me to work on projects that combine cutting-edge technology with meaningful impact.</p>
+       <p class="text-slate-300 leading-relaxed">Currently, I'm focused on cloud infrastructure, DevOps practices, and building systems that scale. I'm always eager to learn new technologies and collaborate on exciting projects.</p>
+      </div>
      </div>
     </section>
    </div><!-- SKILLS PAGE -->
