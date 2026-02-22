@@ -190,17 +190,39 @@
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-   .intro-video {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.video-bg {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-}
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ===== VIDEO INTRO ===== */
+        .intro-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            background: black;
+            z-index: 9999;
+            transition: opacity 1s ease;
+        }
+
+        .intro-video.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .video-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
   </style>
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
@@ -217,23 +239,23 @@
       </div>
      </div>
     </nav>
+      <section class="intro-video" id="introSection">
+        <video autoplay muted playsinline class="video-bg" id="introVideo">
+            <source src="grok_video_2026-02-22-22-10-41-2.mp4" type="video/mp4">
+        </video>
+      </section>
 
-    <section class="intro-video">
-    <video autoplay muted playsinline class="video-bg">
-        <source src="grok_video_2026-02-22-22-10-41-2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    </section>
+       <script>
+        const video = document.getElementById("introVideo");
+        const introSection = document.getElementById("introSection");
 
-    <video autoplay muted loop playsinline class="video-bg">
-
-     <video autoplay muted playsinline class="video-bg" onended="showPortfolio()">
-
-      <script>
-function showPortfolio() {
-    document.querySelector('.intro-video').style.display = 'none';
-}
-      </script>
+        video.onended = function() {
+            introSection.classList.add("fade-out");
+            setTimeout(() => {
+                introSection.style.display = "none";
+            }, 1000);
+        };
+       </script>
     
     <section class="relative min-h-screen flex items-center justify-center px-6 pt-20">
      <div class="max-w-4xl mx-auto text-center relative z-10">
